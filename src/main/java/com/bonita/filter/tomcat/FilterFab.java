@@ -67,12 +67,6 @@ public class FilterFab implements Filter {
             return; // authentification par défaut
         }
 
-        // let connect on this server
-        final Map<String, String> map = new HashMap<String, String>();
-        map.put("server.url", "http://localhost:8080");
-        map.put("application.name", "bonita");
-        APITypeManager.setAPITypeAndParams(ApiAccessType.HTTP, map);
-
         try {
             final LoginAPI loginAPI = TenantAPIAccessor.getLoginAPI();
 
